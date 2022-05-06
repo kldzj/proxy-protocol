@@ -4,8 +4,7 @@ Add PROXY v1 or v2 support to net, http, https, spdy and http2 servers. IPv4 and
 
 ## History
 
-This module is a TypeScript rewrite of original [proxywrap](https://github.com/cusspvz/proxywrap) by [Josh Dague](https://github.com/daguej) and [José Moreira
-](https://github.com/cusspvz).
+This module is a TypeScript rewrite of original [proxywrap](https://github.com/cusspvz/proxywrap) by [Josh Dague](https://github.com/daguej) and [José Moreira](https://github.com/cusspvz).
 
 ## What's the purpose of this module?
 
