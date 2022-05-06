@@ -1,0 +1,31 @@
+{
+  "name": "@kldzj/proxy-protocol",
+  "version": "1.0.0-0",
+  "main": "dist/index.js",
+  "files": [
+    "dist/*"
+  ],
+  "license": "BSD",
+  "repository": "https://github.com/kldzj/proxy-protocol",
+  "bugs": "https://github.com/kldzj/proxy-protocol/issues",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc",
+    "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' nyc mocha -r ts-node/register --globals setImmediate,clearImmediate --check-leaks --colors -t 3000 --exit --reporter spec $(find test/* -name '*.test.ts')",
+    "prepublishOnly": "yarn test && yarn build"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.18",
+    "@types/mocha": "^8.2.2",
+    "@types/node": "^15.12.2",
+    "chai": "^4.3.4",
+    "mocha": "^9.0.0",
+    "nyc": "^15.1.0",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2"
+  },
+  "dependencies": {
+    "proxy-protocol-js": "^4.0.5"
+  }
+}
