@@ -7,8 +7,8 @@ jobs:
       fail-fast: true
       matrix:
         registries:
-          # - url: https://registry.npmjs.org
-          #   env: NPM_TOKEN
+          - url: https://registry.npmjs.org
+            env: NPM_TOKEN
           - url: https://npm.pkg.github.com
             env: GITHUB_TOKEN
     env:
